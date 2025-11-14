@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+# enter gpt prompt from terminal
+
+
+query="$*"
+
+xdg-open "https://chatgpt.com/?q=$query" &
+disown

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#Open hianime
+
+xdg-open "https://web.whatsapp.com"

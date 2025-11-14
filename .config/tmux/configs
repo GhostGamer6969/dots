@@ -1,0 +1,44 @@
+#!/bin/sh
+
+#!configs
+
+SESH="configs"
+
+tmux has-session -t $SESH 2> /dev/null
+if [ $? != 0 ]; then 
+
+  tmux new-session -d -s $SESH -n "hyprland"
+  tmux send-keys -t $SESH:hyprland "cd /home/ghostgamer/.config/hypr" C-m
+  tmux send-keys -t $SESH:hyprland "nvim" C-m
+  tmux send-keys -t $SESH:hyprland ":NvimTreeToggle" C-m
+  
+  tmux new-window -t $SESH -n "nvim"
+  tmux send-keys -t $SESH:nvim "cd /home/ghostgamer/.config/nvim/" C-m
+  tmux send-keys -t $SESH:nvim "nvim" C-m
+  tmux send-keys -t $SESH:nvim ":NvimTreeToggle" C-m  
+
+  tmux new-window -t $SESH -n "tmux"
+  tmux send-keys -t $SESH:tmux "cd /home/ghostgamer/.config/tmux/" C-m
+  tmux send-keys -t $SESH:tmux "nvim" C-m
+  tmux send-keys -t $SESH:tmux ":NvimTreeToggle" C-m
+  
+  tmux new-window -t $SESH -n "default"
+  tmux send-keys -t $SESH:default "cd /home/ghostgamer/.local/share/dotfiles/default" C-m
+  tmux send-keys -t $SESH:default "nvim" C-m
+  tmux send-keys -t $SESH:default ":NvimTreeToggle" C-m
+  
+  tmux new-window -t $SESH -n "waybar"
+  tmux send-keys -t $SESH:waybar "cd /home/ghostgamer/.config/waybar/" C-m
+  tmux send-keys -t $SESH:waybar "nvim" C-m
+  tmux send-keys -t $SESH:waybar ":NvimTreeToggle" C-m
+  
+  tmux new-window -t $SESH -n "Scripts"
+  tmux send-keys -t $SESH:Scripts "cd /home/ghostgamer/Scripts/" C-m
+  tmux send-keys -t $SESH:Scripts "nvim" C-m
+  tmux send-keys -t $SESH:Scripts ":NvimTreeToggle" C-m
+
+  tmux select-window -t $SESH:hyprland
+
+fi
+
+tmux attach-session -t $SESH

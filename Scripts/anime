@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Open hianime
+
+query="$*"
+
+if [ -z "$query" ]; then
+  xdg-open "https://hianime.to/home" &
+  disown
+else
+  xdg-open "https://hianime.to/search?keyword=$query" &
+  disown
+fi

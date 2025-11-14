@@ -1,0 +1,4 @@
+#!/bin/bash
+QUERY=$(rofi -dmenu -p "Search DuckDuckGo:")
+xdg-open "https://duckduckgo.com/?q=${QUERY}"
+

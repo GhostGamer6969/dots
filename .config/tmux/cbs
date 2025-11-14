@@ -1,0 +1,33 @@
+#!/bin/sh
+
+#cbs
+
+SESH="cbs"
+
+tmux has-session -t $SESH 2> /dev/null
+if [ $? != 0 ]; then 
+
+  tmux new-session -d -s $SESH -n "frontend"
+  tmux send-keys -t $SESH:frontend "cd /home/ghostgamer/Codes/theproff-v2/" C-m
+  tmux send-keys -t $SESH:frontend "nvim" C-m
+  tmux send-keys -t $SESH:frontend ":NvimTreeToggle" C-m
+  
+  tmux new-window -t $SESH -n "servers"
+  tmux send-keys -t $SESH:server "cd /home/ghostgamer/Codes/theproff-v2/" C-m
+  tmux send-keys -t $SESH:server "pnpm run dev" C-m
+
+  tmux split-window -h -t $SESH:servers
+
+  tmux send-keys -t $SESH:servers.right "cd /home/ghostgamer/Codes/game-engine-main/" C-m
+  tmux send-keys -t $SESH:servers.right "uvicorn main:app --reload" C-m  
+  
+  tmux new-window -t $SESH -n "backend"
+  tmux send-keys -t $SESH:backend "cd /home/ghostgamer/Codes/game-engine-main/" C-m
+  tmux send-keys -t $SESH:backend "nvim" C-m
+  tmux send-keys -t $SESH:backend ":NvimTreeToggle" C-m
+  
+  tmux select-window -t $SESH:frontend
+
+fi
+
+tmux attach-session -t $SESH

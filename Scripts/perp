@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+# enter gpt prompt from terminal
+
+
+query="$*"
+
+xdg-open "https://perplexity.ai/?q=$query" &
