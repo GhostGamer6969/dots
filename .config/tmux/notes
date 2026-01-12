@@ -7,12 +7,11 @@ SESH="notes"
 tmux has-session -t $SESH 2> /dev/null
 if [ $? != 0 ]; then 
 
-  tmux new-session -d -s $SESH -n "editor"
-  tmux send-keys -t $SESH:editor "cd /home/ghostgamer/Arambh/Vault/" C-m
-  tmux send-keys -t $SESH:editor "nvim" C-m
-  tmux send-keys -t $SESH:editor ":NvimTreeToggle" C-m
+  tmux new-session -d -s $SESH -n "notes"
+  tmux send-keys -t $SESH:notes "cd /home/ghostgamer/Arambh/Vault/" C-m
+  tmux send-keys -t $SESH:notes "yazi" C-m
 
-  tmux select-window -t $SESH:editor
+  tmux select-window -t $SESH:notes
 fi
 
 tmux attach-session -t $SESH

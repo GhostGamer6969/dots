@@ -58,6 +58,7 @@ reload_apps() {
     sleep 0.5
 
     restart-app waybar
+    walcord
     restart-app swayosd-server
     hyprctl reload
     pkill -SIGUSR2 btop
