@@ -60,6 +60,7 @@ reload_apps() {
     restart-app waybar
     walcord
     restart-app swayosd-server
+    restart-app swaync
     hyprctl reload
     pkill -SIGUSR2 btop
     makoctl reload
