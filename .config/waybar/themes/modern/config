@@ -55,7 +55,6 @@
     "modules-left": [
         "hyprland/workspaces",
         "clock",
-        "custom/updates"
     ],
 
     "modules-center": [
@@ -65,9 +64,9 @@
     "modules-right": [
         "pulseaudio",
         "tray",
-        "bluetooth",
         "network",
         "custom/hypridle",
+        "custom/brightness",
         "battery",
         "custom/exit",
         "custom/notification"

@@ -61,7 +61,6 @@
   // Clock
   "clock": {
     "format": "{:%A %H:%M}",
-    "format-alt": "{:%d %B %Y}",
     "tooltip": false
   },
 
@@ -127,18 +126,41 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "ghostty --class=local.impala -e impala"
+    "on-click": "ghostty --class=local.nmtui -e nmtui"
   },
 
   // Quicklinks
   "custom/brightness": {
     "format": "",
-    "on-click": "walker --theme menus -m menus:brightness --width 50 --maxwidth 50"
+    "on-scroll-up": "swayosd-client --brightness raise",
+    "on-scroll-down": "swayosd-client --brightness lower"
   },
 
   "custom/filemanager": {
     "format": "",
     "on-click": "nautilus",
     "tooltip-format": "Open Filemanager"
+  },
+
+  // Notification
+  "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='12pt'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
   }
 }

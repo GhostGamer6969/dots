@@ -22,14 +22,14 @@ get_current() {
 set_profile() {
   local profile="$1"
   powerprofilesctl set "$profile"
-  notify-send "Power Profile" "Set to: $profile" -i power-profile-$profile
+  notify-send -a "Powerprofilectl" "Power Profile" "Set to: $profile" -i power-profile-$profile
 }
 
 if [[ "$1" == "--select" ]]; then
   profiles=$(list_profiles)
 
   if [[ -z "$profiles" ]]; then
-    notify-send "Error" "No power profiles found"
+    notify-send -a "Powerprofilectl" "Error" "No power profiles found"
     exit 1
   fi
 

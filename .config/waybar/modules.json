@@ -61,7 +61,6 @@
   // Clock
   "clock": {
     "format": "{:%A %H:%M}",
-    "format-alt": "{:%d %B %Y}",
     "tooltip": false
   },
 
@@ -133,7 +132,8 @@
   // Quicklinks
   "custom/brightness": {
     "format": "",
-    "on-click": "walker --theme menus -m menus:brightness --width 50 --maxwidth 50"
+    "on-scroll-up": "swayosd-client --brightness raise",
+    "on-scroll-down": "swayosd-client --brightness lower"
   },
 
   "custom/filemanager": {
