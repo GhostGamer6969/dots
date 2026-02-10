@@ -20,7 +20,8 @@
             "7": " ",
             "8": "8",
             "9": "9",
-            "active": " "
+            "active": " ",
+            "urgent": " "
          },
         "persistent-workspaces": {
             "1": [],
@@ -68,7 +69,6 @@
         "custom/hypridle",
         "custom/brightness",
         "battery",
-        "custom/exit",
         "custom/notification"
     ]
 }
