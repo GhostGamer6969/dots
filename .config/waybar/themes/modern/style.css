@@ -52,7 +52,7 @@
 #pulseaudio,
 #custom-brightness,
 #custom-hypridle,
-/* #custom-updates, */
+#custom-streak,
 #custom-exit,
 #custom-notification{
     background-color: @background;
@@ -105,11 +105,11 @@
     margin-left: 1rem;
 }
 
-/* #custom-updates { */
-/*     margin-left: 0.5rem; */
-/*     border-radius: 1rem; */
-/*     color: @foreground; */
-/* } */
+#custom-streak {
+    margin-left: 0.5rem;
+    border-radius: 1rem;
+    color: @foreground;
+}
 
 #custom-hypridle.notactive {
     color: rgb(224, 137, 137);

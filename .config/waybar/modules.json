@@ -37,7 +37,8 @@
     "exec-on-event": true,
     "interval": 60,
     "exec": "hypridle-toggle status",
-    "on-click": "hypridle-toggle toggle"
+    "on-click": "hypridle-toggle toggle",
+    "on-click-right": "hyprlock"
   },
 
   // Music
@@ -162,5 +163,13 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
+  },
+  "custom/streak":{
+    "format": " {}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/streak.sh",
+    "interval": 600,
+    "on-click": "~/.config/waybar/scripts/leet.sh",
+    "on-click-right": "xdg-open https://leetcode.com/u/ghostgamer"
   }
 }

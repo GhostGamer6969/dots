@@ -78,6 +78,7 @@ tooltip {
 
 #clock:hover,
 #custom-updates:hover,
+#custom-streak:hover,
 #custom-hypridle:hover,
 #custom-brightness:hover,
 #custom-filemanager:hover,
@@ -106,6 +107,7 @@ tooltip {
 }
 
 #custom-updates,
+#custom-streak,
 #clock {
     padding: 0px 10px;
     transition: all 0.3s ease;
