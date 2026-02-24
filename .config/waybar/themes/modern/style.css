@@ -47,12 +47,14 @@
 #bluetooth,
 #cpu,
 #clock,
+#custom-countdown,
 #network,
 #battery,
 #pulseaudio,
 #custom-brightness,
 #custom-hypridle,
 #custom-streak,
+#custom-stars,
 #custom-exit,
 #custom-notification{
     background-color: @background;
@@ -67,10 +69,16 @@
     margin-left: 0.5rem;
 }
 
+#custom-countdown {
+    color: @foreground;
+    border-radius: 1rem 1rem 1rem 1rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
 #pulseaudio {
     color: @foreground;
     border-radius: 1rem 1rem 1rem 1rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
 #custom-music {
@@ -106,11 +114,16 @@
 }
 
 #custom-streak {
+    border-radius: 1rem 0rem 0rem 1rem;
     margin-left: 0.5rem;
-    border-radius: 1rem;
     color: @foreground;
 }
 
+#custom-stars {
+    border-radius: 0rem 1rem 1rem 0rem;
+    margin-right: 0.5rem;
+    color: @foreground;
+}
 #custom-hypridle.notactive {
     color: rgb(224, 137, 137);
 }

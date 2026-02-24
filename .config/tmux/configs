@@ -23,7 +23,7 @@ if [ $? != 0 ]; then
   tmux send-keys -t $SESH:tmux ":NvimTreeToggle" C-m
   
   tmux new-window -t $SESH -n "default"
-  tmux send-keys -t $SESH:default "cd /home/ghostgamer/.local/share/dotfiles/default" C-m
+  tmux send-keys -t $SESH:default "cd /home/ghostgamer/.local/share/dotfiles" C-m
   tmux send-keys -t $SESH:default "nvim" C-m
   tmux send-keys -t $SESH:default ":NvimTreeToggle" C-m
   

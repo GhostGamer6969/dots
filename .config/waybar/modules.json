@@ -164,12 +164,34 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true
   },
+
+  // Stars
+  "custom/stars":{
+    "format": " {}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/stars.sh",
+    "interval": 600,
+    "on-click": "xdg-open https://github.com/por-cli/por-cli"
+  },
+
+  // Streak
   "custom/streak":{
     "format": " {}",
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/streak.sh",
-    "interval": 600,
+    "interval": 150,
     "on-click": "~/.config/waybar/scripts/leet.sh",
     "on-click-right": "xdg-open https://leetcode.com/u/ghostgamer"
+  },
+  // Countdown
+  "custom/countdown":
+  {
+    "exec": "~/.config/waybar/scripts/countdown/countdown.sh",
+    "return-type": "json",
+    "format": "{}",
+    "interval": 3600,
+    "on-click": "ghostty --class=local.floating -e ~/.config/waybar/scripts/countdown/countdown.sh --show-tui",
+    "on-scroll-up": "~/.config/waybar/scripts/countdown/countdown.sh --scroll-up",
+    "on-scroll-down": "~/.config/waybar/scripts/countdown/countdown.sh --scroll-down"
   }
 }

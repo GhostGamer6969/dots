@@ -178,6 +178,7 @@ generate_colors_from_wallpaper() {
     process_template "$TEMPLATES_DIR/walker.css" "$OUTPUT_DIR/walker.css"
     process_template "$TEMPLATES_DIR/hyprlock.conf" "$OUTPUT_DIR/hyprlock.conf"
     process_template "$TEMPLATES_DIR/gtk.css" "$OUTPUT_DIR/gtk.css"
+    process_template "$TEMPLATES_DIR/wal.ron" "$OUTPUT_DIR/wal.ron"
 
     echo
 
