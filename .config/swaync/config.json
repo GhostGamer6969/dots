@@ -4,6 +4,7 @@
   "positionY": "top",
 	"cssPriority": "user",
 
+  "sound-file":"/home/ghostgamer/Arambh/sound-effects/Faah.mp3",
   "control-center-width": 380,
   "control-center-height": 960, 
   "control-center-margin-top": 2,
@@ -19,7 +20,7 @@
   "timeout": 4,
   "timeout-low": 2,
   "timeout-critical": 6,
-  
+
   "fit-to-screen": false,
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
@@ -28,6 +29,12 @@
   "hide-on-action": false,
   "script-fail-notify": true,
   "scripts": {
+    "water-reminder-sound": {
+      "exec": "pw-play /home/ghostgamer/.config/swaync/Faah.wav",
+      "app-name": "DRINKING REMINDER",
+      "summary": "Water",
+      "run-on": "receive"
+    },
     "example-script": {
       "exec": "echo 'Do something...'",
       "urgency": "Normal"

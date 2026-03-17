@@ -127,7 +127,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "ghostty --class=local.nmtui -e nmtui"
+    "on-click": "ghostty --class=local.floating -e nmtui"
   },
 
   // Quicklinks
