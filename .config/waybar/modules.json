@@ -49,6 +49,8 @@
     "tooltip": false,
     "exec": "playerctl metadata --format='{{ title }} - {{artist}}'",
     "on-click": "playerctl play-pause",
+    "on-double-click": "playerctl next",
+    "on-double-click-right": "playerctl previous",
     "max-length": 50
   },
 
@@ -174,6 +176,13 @@
     "on-click": "xdg-open https://github.com/por-cli/por-cli"
   },
 
+  // Solana
+  "custom/solana":{
+    "format": " {}",
+    "exec": "~/.config/waybar/scripts/sol.sh",
+    "interval": 150,
+    "on-click": "xdg-open https://unmineable.com/account/dashboard"
+  },
   // Streak
   "custom/streak":{
     "format": " {}",

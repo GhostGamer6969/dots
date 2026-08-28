@@ -1,0 +1,35 @@
+(deflisten cava :initial "[]"
+  "~/.config/eww/scripts/cava.sh")
+
+(defwidget cava_bar [value]
+  (box
+    :class "cava-bar-container"
+    :valign "end"
+    :vexpand true
+    (box
+      :class "cava-bar"
+      :style "min-height: ${value}px;")))
+
+(defwidget visualizer []
+  (box
+    :class "visualizer"
+    :orientation "h"
+    :space-evenly false
+    :halign "fill"
+    :valign "end"
+    :vexpand true
+
+    (for bar in cava
+      (cava_bar :value bar))))
+
+(defwindow visualizer
+  :monitor 0
+  :stacking "bottom"
+  :exclusive false
+  :focusable false
+  :geometry (geometry
+    :x "0%"
+    :y "0%"
+    :width "100%"
+    :anchor "bottom center")
+  (visualizer))

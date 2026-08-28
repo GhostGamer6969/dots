@@ -57,6 +57,7 @@ reload_apps() {
     log_step "Reloading applications"
     sleep 0.5
 
+    eww reload
     restart-app waybar
     walcord
     restart-app swayosd-server

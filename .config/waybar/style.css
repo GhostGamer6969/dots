@@ -54,6 +54,7 @@
 #custom-brightness,
 #custom-hypridle,
 #custom-streak,
+#custom-solana,
 #custom-stars,
 #custom-exit,
 #custom-notification{
@@ -113,6 +114,11 @@
     margin-left: 1rem;
 }
 
+#custom-solana {
+    border-radius: 1rem 0rem 0rem 1rem;
+    margin-left: 0.5rem;
+    color: @foreground;
+}
 #custom-streak {
     border-radius: 1rem 0rem 0rem 1rem;
     margin-left: 0.5rem;

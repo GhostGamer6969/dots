@@ -1,0 +1,26 @@
+@import "/home/ghostgamer/.cache/wal/colors.scss";
+* {
+    all: unset;
+}
+
+.visualizer {
+    padding: 0;
+}
+
+.cava-bar-container {
+    min-width: 22px;
+    margin: 0 1px;
+}
+
+.cava-bar {
+    min-width: 4px;
+    border-radius: 4px 4px 0 0;
+
+    background: linear-gradient(
+        to top,
+        $color4,
+        $color5,
+        $color6,
+        $color7
+    );
+}

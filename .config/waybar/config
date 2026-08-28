@@ -37,7 +37,7 @@
     },
 
     "clock": {
-        "format":" {:%d  %H:%M}",
+        "format":" {:%d  %H:%M}"
     },
 
     "pulseaudio": {
@@ -54,8 +54,7 @@
 
     "modules-left": [
         "hyprland/workspaces",
-        "clock",
-        "custom/countdown",
+        "clock"
     ],
 
     "modules-center": [
@@ -63,7 +62,7 @@
     ],
 
     "modules-right": [
-        "custom/streak",
+        "custom/solana",
         "custom/stars",
         "pulseaudio",
         "tray",
