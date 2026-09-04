@@ -8,7 +8,7 @@ window=$(hyprctl clients -j | jq -r '
 ' | head -n1)
 
 if [ -n "$window" ]; then
-    hyprctl dispatch focuswindow address:$window
+    hyprctl dispatch 'hl.dsp.focus({ window = "address:'"$window"'" })'
 else
     ghostty >/dev/null 2>&1 &
 fi
