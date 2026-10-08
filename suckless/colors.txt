@@ -1,0 +1,8 @@
+accent = #d55564
+bg = #161115
+bg2 = #302737
+fg = #f6c8b5
+fg2 = #e38687
+RED = #62111b
+BLUE = #363b63
+YELLOW = #f57f46

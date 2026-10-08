@@ -4,7 +4,7 @@
 (
  address: "/run/user/1000/mpd/socket",
  password: None,
- theme:"wal",
+ theme:"dwm",
  cache_dir: "/home/ghostgamer/.cache/rmpc",
  lyrics_dir: "/run/media/ghostgamer/ExSSd/Music",
  on_song_change: None,

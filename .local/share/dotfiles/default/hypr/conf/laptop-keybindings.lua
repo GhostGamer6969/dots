@@ -61,8 +61,8 @@ hl.bind(mainMod .. " + CTRL + W", hl.dsp.exec_cmd("waypaper"))                  
 -- Walker and Elephant
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("walker"))                                                  -- Launch application launcher
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("walker --theme menus -m menus:system --width 150 --minheight 1 --maxheight 600")) -- System menu
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("sh -c 'hyprshot -m region --clipboard-only'"))    -- Screenshot to clipboard
-hl.bind("Print", hl.dsp.exec_cmd("sh -c 'hyprshot -m region --clipboard-only'"))                       -- Screenshot to clipboard
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("sh -c 'hyprshot -m region --border-width 0 --clipboard-only'"))    -- Screenshot to clipboard
+hl.bind("Print", hl.dsp.exec_cmd("sh -c 'hyprshot -m region --border-width 0 --clipboard-only'"))                       -- Screenshot to clipboard
 hl.bind(mainMod .. " + CTRL + SHIFT + S", hl.dsp.exec_cmd("walker --theme menus -m menus:screenshots --width 295 --minheight 1 --maxheight 600")) -- Screenshot menu
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("walker -m clipboard"))                                     -- Clipboard history
 hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd("walker -m symbols"))                                  -- Emoji menu
@@ -80,6 +80,7 @@ hl.bind(mainMod .. " + 7", hl.dsp.focus({ workspace = 7 }))                     
 hl.bind(mainMod .. " + 8", hl.dsp.focus({ workspace = 8 }))                                            -- Open workspace 8
 hl.bind(mainMod .. " + 9", hl.dsp.focus({ workspace = 9 }))                                            -- Open workspace 9
 hl.bind(mainMod .. " + 0", hl.dsp.focus({ workspace = 10 }))                                           -- Open workspace 10
+
 
 hl.bind(mainMod .. " + SHIFT + 1", hl.dsp.window.move({ workspace = 1 }))                              -- Move active window to workspace 1
 hl.bind(mainMod .. " + SHIFT + 2", hl.dsp.window.move({ workspace = 2 }))                              -- Move active window to workspace 2

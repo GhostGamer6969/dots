@@ -67,3 +67,10 @@ hl.layer_rule({
     },
     ignore_alpha = 0.41,
 })
+hl.layer_rule({
+    name = "no-anim-for-selection",
+    match = {
+        namespace = "selection",
+    },
+    no_anim = true,
+})

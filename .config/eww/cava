@@ -9,4 +9,4 @@ method = pulse
 method = raw
 raw_target = /dev/stdout
 data_format = ascii
-ascii_max_range = 100
+ascii_max_range = 500

@@ -24,8 +24,15 @@ hl.workspace_rule({
     monitor = "DP-1",
     persistent = false,
 })
-
+hl.workspace_rule({
+    workspace = 9,
+    monitor = "HEADLESS-1",
+})
 -- Apps
+-- hl.window_rule({
+--     match = { class = "^(firefox)$" },
+--     workspace = "99",
+-- })
 hl.window_rule({
     match = { class = "^(itty)$" },
     workspace = "1",
@@ -96,12 +103,12 @@ hl.window_rule({
     float = true,
     workspace = "7",
 })
-hl.window_rule({
-    match = { class = "^(firefox)$" },
-    float = true,
-    workspace = "8",
-    -- silent = true,
-})
+-- hl.window_rule({
+--     match = { class = "^(firefox)$" },
+--     float = true,
+--     workspace = "8",
+--     -- silent = true,
+-- })
 hl.window_rule({
     match = { tag = "floating-window" },
     float = true,

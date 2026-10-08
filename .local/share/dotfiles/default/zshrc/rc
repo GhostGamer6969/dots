@@ -4,3 +4,4 @@ source ~/.local/share/dotfiles/default/zshrc/aliases
 source ~/.local/share/dotfiles/default/zshrc/functions
 export PATH="$HOME/Scripts:$PATH"
 export PATH="$HOME/.config/tmux:$PATH"
+export CUA_DRIVER_RS_ENABLE_WAYLAND=1
