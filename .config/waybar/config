@@ -62,8 +62,6 @@
     ],
 
     "modules-right": [
-        "custom/solana",
-        "custom/stars",
         "pulseaudio",
         "tray",
         "network",

@@ -1,0 +1,66 @@
+/**
+ * @name Pink Porsche  Theme
+ * @author GhostGamer6969
+ * @version 1.0.0
+ * @website https://github.com/GhostGamer6969/dots
+**/
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/DiscordRecolor/DiscordRecolor.css);
+
+:root {
+	--settingsicons: 0;
+	--font: "CaskaydiaMono Nerd Font";
+}
+
+.theme-dark {
+	/* Accent Colors */
+	--accentcolor: 213,85,100;       /* #d55564 */
+	--accentcolor2: 227,134,135;     /* #e38687 */
+	--linkcolor: 245,127,70;         /* #f57f46 */
+	--mentioncolor: 213,85,100;      /* #d55564 */
+	--successcolor: 227,134,135;     /* #e38687 */
+	--warningcolor: 245,127,70;      /* #f57f46 */
+	--dangercolor: 98,17,27;          /* #62111b */
+
+	/* Text Colors */
+	--textbrightest: 246,200,181;    /* #f6c8b5 */
+	--textbrighter: 246,200,181;     /* #f6c8b5 */
+	--textbright: 227,134,135;       /* #e38687 */
+	--textdark: 227,134,135;         /* #e38687 */
+	--textdarker: 227,134,135;       /* #e38687 */
+	--textdarkest: 213,85,100;       /* #d55564 */
+
+	/* Background Colors */
+	--backgroundaccent: 48,39,55;    /* #302737 */
+	--backgroundprimary: 22,17,21;   /* #161115 */
+	--backgroundsecondary: 22,17,21; /* #161115 */
+	--backgroundsecondaryalt: 48,39,55; /* #302737 */
+	--backgroundtertiary: 22,17,21;  /* #161115 */
+	--backgroundfloating: 48,39,55;  /* #302737 */
+}
+
+.theme-light {
+	/* Accent Colors */
+	--accentcolor: 213,85,100;       /* #d55564 */
+	--accentcolor2: 227,134,135;     /* #e38687 */
+	--linkcolor: 245,127,70;         /* #f57f46 */
+	--mentioncolor: 213,85,100;      /* #d55564 */
+	--successcolor: 227,134,135;     /* #e38687 */
+	--warningcolor: 245,127,70;      /* #f57f46 */
+	--dangercolor: 98,17,27;          /* #62111b */
+
+	/* Text Colors */
+	--textbrightest: 22,17,21;       /* #161115 */
+	--textbrighter: 22,17,21;        /* #161115 */
+	--textbright: 48,39,55;          /* #302737 */
+	--textdark: 48,39,55;             /* #302737 */
+	--textdarker: 48,39,55;           /* #302737 */
+	--textdarkest: 213,85,100;       /* #d55564 */
+
+	/* Background Colors */
+	--backgroundaccent: 246,200,181; /* #f6c8b5 */
+	--backgroundprimary: 246,200,181; /* #f6c8b5 */
+	--backgroundsecondary: 227,134,135; /* #e38687 */
+	--backgroundsecondaryalt: 246,200,181; /* #f6c8b5 */
+	--backgroundtertiary: 227,134,135; /* #e38687 */
+	--backgroundfloating: 246,200,181; /* #f6c8b5 */
+}
