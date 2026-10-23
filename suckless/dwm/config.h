@@ -36,7 +36,7 @@ static const Rule rules[] = {
 	{ "zen",          NULL,       NULL,        1 << 1,      1 << 1,       0,           -1 },
 	{ "qutebrowser",  NULL,       NULL,        1 << 1,      1 << 1,       0,           -1 },
 	{ "obs",          NULL,       NULL,        1 << 2,      1 << 2,       0,           -1 },
-	{ "ghostty",      NULL,       NULL,        1 << 0,      1 << 0,       0,           -1 },
+	{ "ghostty",      NULL,       NULL,      0,           0,            1,           -1 },
 	{ "st",           NULL,       NULL,        1 << 0,      1 << 0,       0,           -1 },
 	{ "Firefox",      NULL,       NULL,        1 << 8,      1 << 8,       0,           -1 },
 };
@@ -46,7 +46,7 @@ static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
-static const int refreshrate = 120;  /* refresh rate (per second) for client move/resize */
+static const int refreshrate = 144;  /* refresh rate (per second) for client move/resize */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -69,6 +69,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *termcmd[]  = { "ghostty", NULL };
+static const char *rmpccmd[]  = { "ghostty","--class=rmpc","-e","rmpc", NULL };
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_accent, "-sf", col_fg, NULL };
 static const char *rofi[] = {"rofi", "-show", "drun","-theme", "~/.config/rofi/arthur.rasi",NULL};
 static const char *powermenu[] = { "/bin/sh", "-c", "$HOME/.local/bin/powermenu", NULL };
@@ -80,6 +81,7 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = rofi } },
 	{ MODKEY,                       XK_q,      spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = rmpccmd } },
 	{ MODKEY,                       XK_Escape, spawn,          {.v = powermenu } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -114,6 +116,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} },
 	{ MODKEY,                       XK_b,      spawn,          SHCMD("qutebrowser") },
+	{ MODKEY,                       XK_o,      spawn,          SHCMD("obsidian") },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_e,      spawn,          {.v = file_manager} },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = screen_shot} },
@@ -138,7 +141,7 @@ static const Button buttons[] = {
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
-    	{ ClkClientWin,         MODKEY|ShiftMask,Button3,       gesture,        {0} },
+  { ClkClientWin,         MODKEY|ShiftMask,Button3,       gesture,        {0} },
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },

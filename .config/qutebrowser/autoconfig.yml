@@ -23,6 +23,8 @@ settings:
     https://chatgpt.com: access-paste
   content.notifications.enabled:
     https://www.youtube.com: true
+  content.register_protocol_handler:
+    https://mail.google.com?extsrc=mailto&url=%25s: true
   qt.highdpi:
     global: true
   qt.workarounds.disable_accelerated_2d_canvas:

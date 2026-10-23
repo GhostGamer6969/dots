@@ -42,14 +42,14 @@ set_wallpaper() {
 
 apply_gnome_settings() {
     gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
-    gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+    gsettings set org.gnome.desktop.interface gtk-theme "Pink-Porsche"
 
     # Change gnome icon theme based on current theme
     local gnome_icons_theme="$CONFIG_BASE/current/theme/icons.theme"
     if [[ -f "$gnome_icons_theme" ]]; then
         gsettings set org.gnome.desktop.interface icon-theme "$(<"$gnome_icons_theme")"
     else
-        gsettings set org.gnome.desktop.interface icon-theme "Yaru-blue"
+        gsettings set org.gnome.desktop.interface icon-theme "Yaru-red"
     fi
 }
 

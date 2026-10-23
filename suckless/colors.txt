@@ -6,3 +6,30 @@ fg2 = #e38687
 RED = #62111b
 BLUE = #363b63
 YELLOW = #f57f46
+
+accent = rgba(213, 85, 100, 0.5)
+bg = rgba(22, 17, 21, 0.5)
+bg2 = rgba(48, 39, 55, 0.5)
+fg = rgba(246, 200, 181, 0.5)
+fg2 = rgba(227, 134, 135, 0.5)
+RED = rgba(98, 17, 27, 0.5)
+BLUE = rgba(54, 59, 99, 0.5)
+YELLOW = rgba(245, 127, 70, 0.5)
+
+# hyprlock format
+accent = rgb(d55564)
+accent_rgba = rgba(d55564ff)
+bg = rgb(161115)
+bg_rgba = rgba(161115ff)
+bg2 = rgb(302737)
+bg2_rgba = rgba(302737ff)
+fg = rgb(f6c8b5)
+fg_rgba = rgba(f6c8b5ff)
+fg2 = rgb(e38687)
+fg2_rgba = rgba(e38687ff)
+RED = rgb(62111b)
+RED_rgba = rgba(62111bff)
+BLUE = rgb(363b63)
+BLUE_rgba = rgba(363b63ff)
+YELLOW = rgb(f57f46)
+YELLOW_rgba = rgba(f57f46ff)
