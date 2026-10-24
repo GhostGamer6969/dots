@@ -1,7 +1,7 @@
 @import "../../.local/share/dotfiles/current/theme/waybar.css";
 
 * {
-    font-family: CaskaydiaMono Nerd Font;
+    font-family: CaskaydiaMono Nerd Font Propo;
     font-size: 16px;
     min-height: 0;
 }

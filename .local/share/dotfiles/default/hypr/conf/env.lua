@@ -1,6 +1,8 @@
 -- Cursor size
 hl.env("XCURSOR_SIZE", "24")
+hl.env("XCURSOR_THEME", "Babita-Modern-Ice")
 hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME", "Babita-Modern-Ice")
 
 -- Force all apps to use Wayland
 hl.env("GDK_BACKEND", "wayland,x11,*")
