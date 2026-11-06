@@ -124,9 +124,9 @@ hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("swayosd-client --playerctl previou
 hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock")) -- lock screen
 
 -- Lid
-hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("hyprlock"))
-hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("hyprctl dispatch dpms off"))
-hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("hyprctl dispatch dpms on"))
+hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("hyprlock"), { locked = true })
+hl.bind("switch:on:Lid Switch", hl.dsp.dpms({action="disable"}), { locked = true })
+hl.bind("switch:off:Lid Switch",hl.dsp.dpms({action = "enable"}), { locked = true })
 
 --Sound board
 hl.bind("CTRL + ALT + SHIFT + F", hl.dsp.exec_cmd('soundboard "/home/ghostgamer/Arambh/sound-effects/Faah.mp3"')) -- Faah Sound Effect

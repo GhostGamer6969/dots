@@ -48,7 +48,7 @@
         "tooltip-format": "Playing at {volume}%",
         "format-muted": "",
         "format-icons": {
-        "default": ["", "", " "]
+        "default": ["", "", ""]
         }
     },
 

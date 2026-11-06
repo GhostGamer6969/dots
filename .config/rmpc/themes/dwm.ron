@@ -22,7 +22,7 @@
    inactive_style: (),
    ),
 
- highlighted_item_style: (fg: "#161115", bg: "#d55564", modifiers: "Bold"),
+ highlighted_item_style: (fg: "#161115", bg: "#e38687", modifiers: "Bold"),
  current_item_style: (fg: "#161115", bg: "#d55564", modifiers: "Bold"),
 
  borders_style: (fg: "#d55564"),

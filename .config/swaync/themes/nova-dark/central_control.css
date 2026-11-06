@@ -1,15 +1,9 @@
-@define-color text            @foreground;
-@define-color background-alt  alpha(@color1, .4);
-@define-color selected        @color6;
-@define-color hover           alpha(@selected, .4);
-@define-color urgent          @color2;
-
 * {
-  color:            @text;
+  color:@text;
 
   all: unset;
   font-size: 14px;
-  font-family: "JetBrains Mono Nerd Font 10";
+  font-family: "CaskaydiaMono Nerd Font 11.5";
   transition: 200ms;
 
 }
@@ -31,6 +25,15 @@
 }
 
 /* Notifications  */
+.notification,
+.notification label,
+.notification-content,
+.summary,
+.body,
+.time {
+  color: @text;
+}
+
 .control-center .notification-row .notification-background,
 .control-center .notification-row .notification-background .notification.critical {
   background-color: @background-alt;
@@ -96,6 +99,14 @@ progressbar {
 }
 
 /* Notifications expanded-group */
+/* Group headers and controls */
+.notification-group,
+.notification-group label,
+.notification-group-headers,
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+  color: @text;
+}
 
 .notification-group {
   margin: 2px 8px 2px 8px;
@@ -254,4 +265,29 @@ picture.mpris-background {
   padding: 4px;
   margin: 6px;
   border-radius: 6px;
+}
+/* Empty notifications state */
+.control-center .notification-list,
+.control-center .empty-state {
+  color: @text;
+}
+
+/* Empty-state label */
+.control-center .notification-list label,
+.control-center .empty-state label {
+  color: @text;
+}
+
+/* Empty-state icon / bell */
+.control-center .notification-list image,
+.control-center .empty-state image {
+  color: @text;
+  -gtk-icon-palette: success @text, warning @text, error @text, 
+                     success_color @text;
+}
+
+/* Fallback for all GTK labels and images */
+.control-center label,
+.control-center image {
+  color: @text;
 }

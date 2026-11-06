@@ -114,6 +114,11 @@
     margin-left: 1rem;
 }
 
+#tray image {
+    color: @foreground;
+    -gtk-icon-style: symbolic;
+}
+
 #custom-solana {
     border-radius: 1rem 0rem 0rem 1rem;
     margin-left: 0.5rem;

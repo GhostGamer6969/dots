@@ -103,12 +103,11 @@ hl.window_rule({
     float = true,
     workspace = "7",
 })
--- hl.window_rule({
---     match = { class = "^(firefox)$" },
---     float = true,
---     workspace = "8",
---     -- silent = true,
--- })
+hl.window_rule({
+    match = { class = "^(chromium-browser)$" },
+    workspace = "8",
+    -- silent = true,
+})
 hl.window_rule({
     match = { tag = "floating-window" },
     float = true,
