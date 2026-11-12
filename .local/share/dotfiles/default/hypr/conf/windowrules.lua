@@ -97,13 +97,6 @@ hl.window_rule({
 
 -- Floating windows
 hl.window_rule({
-    match = { class = "^(waydroid.*)$" },
-    center = true,
-    size = "467 831",
-    float = true,
-    workspace = "7",
-})
-hl.window_rule({
     match = { class = "^(chromium-browser)$" },
     workspace = "8",
     -- silent = true,
@@ -111,13 +104,7 @@ hl.window_rule({
 hl.window_rule({
     match = { tag = "floating-window" },
     float = true,
-})
-hl.window_rule({
-    match = { tag = "floating-window" },
     center = true,
-})
-hl.window_rule({
-    match = { tag = "floating-window" },
     size = "800 600",
 })
 hl.window_rule({
@@ -127,30 +114,13 @@ hl.window_rule({
     },
     tag = "+floating-window",
 })
-
--- idleinhibit
--- hl.window_rule({
---     match = { class = "([window])" },
---     idle_inhibit = "fullscreen",
--- })
-
 -- CLI tools
 hl.window_rule({
     match = {
         class = "^(local\\.bluetui|local\\.impala|local\\.wiremix|local\\.org\\.gnome\\.NautilusPreviewer|local\\.com\\.gabm\\.satty)$",
     },
     float = true,
-})
-hl.window_rule({
-    match = {
-        class = "^(local\\.bluetui|local\\.impala|local\\.wiremix|local\\.org\\.gnome\\.NautilusPreviewer|local\\.com\\.gabm\\.satty)$",
-    },
     center = true,
-})
-hl.window_rule({
-    match = {
-        class = "^(local\\.bluetui|local\\.impala|local\\.wiremix|local\\.org\\.gnome\\.NautilusPreviewer|local\\.com\\.gabm\\.satty)$",
-    },
     size = "800 600",
 })
 
@@ -158,13 +128,7 @@ hl.window_rule({
 hl.window_rule({
     match = { class = "^(local\\.floating)$" },
     float = true,
-})
-hl.window_rule({
-    match = { class = "^(local\\.floating)$" },
     center = true,
-})
-hl.window_rule({
-    match = { class = "^(local\\.floating)$" },
     size = "800 600",
 })
 
@@ -172,13 +136,7 @@ hl.window_rule({
 hl.window_rule({
     match = { class = "^(local\\.floating_wide)$" },
     float = true,
-})
-hl.window_rule({
-    match = { class = "^(local\\.floating_wide)$" },
     center = true,
-})
-hl.window_rule({
-    match = { class = "^(local\\.floating_wide)$" },
     size = "1280 720",
 })
 
@@ -196,21 +154,11 @@ hl.window_rule({
     tag = "+firefox-based-browser",
 })
 
--- Force chromium-based browsers into a tile to deal with --app bug
-hl.window_rule({
-    match = { tag = "chromium-based-browser" },
-    tile = true,
-})
-
--- Only a subtle opacity change, but not for video sites
-hl.window_rule({
-    match = { tag = "chromium-based-browser" },
-    opacity = "1 0.97",
-})
-hl.window_rule({
-    match = { tag = "firefox-based-browser" },
-    opacity = "1 0.97",
-})
+-- -- Force chromium-based browsers into a tile to deal with --app bug
+-- hl.window_rule({
+--     match = { tag = "chromium-based-browser" },
+    -- tile = true,
+-- })
 
 -- Some video sites should never have opacity applied to them
 hl.window_rule({
@@ -235,13 +183,7 @@ hl.window_rule({
 hl.window_rule({
     match = { class = "(Share|localsend)" },
     float = true,
-})
-hl.window_rule({
-    match = { class = "(Share|localsend)" },
     center = true,
-})
-hl.window_rule({
-    match = { class = "(Share|localsend)" },
     size = "500 700",
 })
 
@@ -249,12 +191,9 @@ hl.window_rule({
 hl.window_rule({
     match = { class = "(waypaper)" },
     float = true,
-})
-hl.window_rule({
-    match = { class = "(waypaper)" },
+    center = true,
     size = "800 600",
 })
 hl.window_rule({
-    match = { class = "(waypaper)" },
-    center = true,
+  match = { class = "^ONLYOFFICE$" },
 })
